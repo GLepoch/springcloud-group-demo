@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri:
+          search-paths:
+          username:GLepoch
+          password: l537073101
+server:
+  port: 5001
