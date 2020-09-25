@@ -1,0 +1,13 @@
+/.idea/
+/consumer/src/test/
+/eureka/.mvn/
+/eureka/src/test/
+/oauth/.mvn/
+/oauth/src/test/
+/oauthsource/.mvn/
+/oauthsource/src/test/
+/provider/.mvn/
+/provider/src/test/
+/zuul/.mvn/
+/zuul/src/test/
+/consumer/src/test/
