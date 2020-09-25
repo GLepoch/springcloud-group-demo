@@ -11,3 +11,4 @@
 /zuul/.mvn/
 /zuul/src/test/
 /consumer/src/test/
+/configserver/src/test/
