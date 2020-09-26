@@ -11,3 +11,9 @@
 /zuul/.mvn/
 /zuul/src/test/
 /consumer/src/test/
+/consumer/target/
+/eureka/target/
+/oauth/target/
+/oauthsource/target/
+/provider/target/
+/zuul/target/
