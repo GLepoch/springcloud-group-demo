@@ -1,0 +1,6 @@
+D:\study_workplaces\springcloud-group-demo\consumer\src\main\java\com\glepoch\consumer\ConsumerApplication.java
+D:\study_workplaces\springcloud-group-demo\consumer\src\main\java\com\glepoch\consumer\controller\HelloController.java
+D:\study_workplaces\springcloud-group-demo\consumer\src\main\java\com\glepoch\consumer\service\impl\HelloServiceImpl.java
+D:\study_workplaces\springcloud-group-demo\consumer\src\main\java\com\glepoch\consumer\service\impl\FeignServiceFallBack.java
+D:\study_workplaces\springcloud-group-demo\consumer\src\main\java\com\glepoch\consumer\service\FeignService.java
+D:\study_workplaces\springcloud-group-demo\consumer\src\main\java\com\glepoch\consumer\service\HelloService.java

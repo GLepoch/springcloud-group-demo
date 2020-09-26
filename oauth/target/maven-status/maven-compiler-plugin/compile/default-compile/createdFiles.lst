@@ -1,0 +1,14 @@
+com\glepoch\oauth\mappper\MenuMapper.class
+com\glepoch\oauth\config\CustomAdditionalInformation.class
+com\glepoch\oauth\bean\User.class
+com\glepoch\oauth\bean\Menu.class
+com\glepoch\oauth\config\WebSecurityConfig.class
+com\glepoch\oauth\controller\ProductController.class
+com\glepoch\oauth\mappper\UserMapper.class
+com\glepoch\oauth\OauthApplication.class
+com\glepoch\oauth\service\UserService.class
+com\glepoch\oauth\controller\UserController.class
+com\glepoch\oauth\mappper\RoleMapper.class
+com\glepoch\oauth\config\OauthServerConfig.class
+com\glepoch\oauth\service\impl\UserServiceImpl.class
+com\glepoch\oauth\bean\Role.class

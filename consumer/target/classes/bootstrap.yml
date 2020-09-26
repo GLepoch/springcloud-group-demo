@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: consumer
+  cloud:
+    config:
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+        service-id: configserver

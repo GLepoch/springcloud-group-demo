@@ -1,0 +1,7 @@
+com\glepoch\oauthsource\controller\UserController.class
+com\glepoch\oauthsource\config\OauthSourceConfig.class
+com\glepoch\oauthsource\controller\ProductController.class
+com\glepoch\oauthsource\bean\Menu.class
+com\glepoch\oauthsource\OauthsourceApplication.class
+com\glepoch\oauthsource\bean\User.class
+com\glepoch\oauthsource\bean\Role.class

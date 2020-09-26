@@ -1,0 +1,15 @@
+com\glepoch\zuul\controller\TestOAuth2Login.class
+com\glepoch\zuul\bean\Role.class
+com\glepoch\zuul\config\MySecurityMetadataSource.class
+com\glepoch\zuul\config\MyAccessDecisionManager.class
+com\glepoch\zuul\service\UserService.class
+com\glepoch\zuul\config\SecurityConfig.class
+com\glepoch\zuul\controller\HelloController.class
+com\glepoch\zuul\mappper\MenuMapper.class
+com\glepoch\zuul\service\impl\UserServiceImpl.class
+com\glepoch\zuul\mappper\RoleMapper.class
+com\glepoch\zuul\mappper\UserMapper.class
+com\glepoch\zuul\bean\Menu.class
+com\glepoch\zuul\config\SecurityConfig$1.class
+com\glepoch\zuul\ZuulApplication.class
+com\glepoch\zuul\bean\User.class
