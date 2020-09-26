@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: provider
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///security_authority
+    username: root
+    password: 123
+  main:
+    allow-bean-definition-overriding: true
+server:
+  port: 2001
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    ip-address: 127.0.0.1:${server.port}
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka-b:1002/eureka,http://eureka-a:1001/eureka
+resilience4j:
+  ratelimiter:
+    limiters:
+      rlA:
+        limit-for-period: 1
+        limit-refresh-period: 2s
+        timeout-duration: 2s
+mybatis:
+  type-aliases-package: com.glepoch.provider.bean
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    com:
+      glepoch: debug

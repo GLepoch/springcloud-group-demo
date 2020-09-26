@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: consumer
+
+server:
+  port: 3001
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    ip-address: 127.0.0.1:${server.port}
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka-b:1002/eureka,http://eureka-a:1001/eureka
+
+
+resilience4j:
+  retry:
+    retry-aspect-order: 399
+    backends:
+      retryA:
+        max-retry-attempts: 5
+        wait-duration: 500
+        exponential-backoff-multiplier: 1.1
+        retry-exceptions: java.lang.RuntimeException
+
+  circuitbreaker:
+    instances:
+      cbA:
+        ring-buffer-size-in-closed-state: 5
+        ring-buffer-size-in-half-open-state: 3
+        record-exceptions: org.springframework.web.client.HttpServerErrorException
+
+    circuit-breaker-aspect-order: 398
+
+  ratelimiter:
+    limiters:
+      rlA:
+        limit-for-period: 1
+        limit-refresh-period: 2s
+        timeout-duration: 2s
+
+feign:
+  compression:
+    request:
+      enabled: true
+      mime-types: text/html,application/json
+      min-request-size: 2048
+    response:
+      enabled: true

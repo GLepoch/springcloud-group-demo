@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: oauth
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///security_authority
+    username: root
+    password: 123
+  main:
+    allow-bean-definition-overriding: true
+server:
+  port: 9001
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    ip-address: 127.0.0.1:${server.port}
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka-a:1001/eureka,http://eureka-a:1002/eureka
+
+mybatis:
+  type-aliases-package: com.glepoch.oauth.bean
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    com:
+      glepoch: debug
+
