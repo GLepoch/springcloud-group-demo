@@ -1,13 +1,4 @@
-spring:
-  application:
-    name: configserver
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/GLepoch/springcloud-group-demo.git
-          search-paths: configserver/comm-config,configserver/single-config/{application}
-          username: GLepoch
-          password: l537073101
-server:
-  port: 5001
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
