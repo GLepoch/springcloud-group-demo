@@ -1,4 +1,31 @@
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/GLepoch/cloud_config.git
+          search-paths: com-config
+          username: GLepoch
+          password: l537073101
+  rabbitmq:
+    host: 106.52.229.99
+    port: 5672
+    username: glepoch
+    password: glepoch
+    virtual-host: /
+server:
+  port: 2001
 eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
   client:
-    serviceUrl:
-      defaultZone: http://localhost:1001/eureka/
+    service-url:
+      defaultZone: http://eureka-a:1001/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh   #如果配置了security  需要配置过滤httpbasic

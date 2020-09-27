@@ -1,7 +1,0 @@
-#生成jks 方法 keytool -genkeypair -alias mytestkey -keyalg RSA -keypass 111111 -keystore D:\configserver.jks -storepass 111111
-encrypt:
-  key-store:
-    location:
-    alias: mytestkey
-    password: 111111
-    secret: 111111

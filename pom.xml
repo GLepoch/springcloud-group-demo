@@ -23,6 +23,7 @@
         <module>oauthsource</module>
         <module>provider</module>
         <module>consumer</module>
+        <module>configserver</module>
     </modules>
 
     <properties>

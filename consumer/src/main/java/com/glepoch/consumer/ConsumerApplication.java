@@ -10,7 +10,6 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableFeignClients
-@EnableEurekaClient
 public class ConsumerApplication {
 
     public static void main(String[] args) {

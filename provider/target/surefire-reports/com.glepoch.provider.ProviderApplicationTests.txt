@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.glepoch.provider.ProviderApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 49.472 s - in com.glepoch.provider.ProviderApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 37.136 s - in com.glepoch.provider.ProviderApplicationTests
