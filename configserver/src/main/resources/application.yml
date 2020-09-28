@@ -15,8 +15,12 @@ spring:
     username: glepoch
     password: glepoch
     virtual-host: /
+  security:
+    user:
+      name: config
+      password: config
 server:
-  port: 2001
+  port: 5001
 eureka:
   instance:
     prefer-ip-address: true
