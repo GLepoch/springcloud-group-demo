@@ -1,6 +1,0 @@
-com\glepoch\provider\bean\Menu.class
-com\glepoch\provider\bean\User.class
-com\glepoch\provider\config\OauthSourceConfig.class
-com\glepoch\provider\bean\Role.class
-com\glepoch\provider\controller\FeignController.class
-com\glepoch\provider\ProviderApplication.class

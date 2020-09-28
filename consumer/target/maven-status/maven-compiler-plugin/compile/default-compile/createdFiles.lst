@@ -1,5 +1,0 @@
-com\glepoch\consumer\service\impl\HelloServiceImpl.class
-com\glepoch\consumer\controller\HelloController.class
-com\glepoch\consumer\ConsumerApplication.class
-com\glepoch\consumer\service\HelloService.class
-com\glepoch\consumer\service\FeignService.class
