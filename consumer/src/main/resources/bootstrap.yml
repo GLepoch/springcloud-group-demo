@@ -5,7 +5,7 @@ spring:
   cloud:
     config:
       label: master
-      #uri: 127.0.0.1:2001
+      #uri: ${spring.cloud.client.ip-address}:2001
       discovery:
         enabled: true
         service-id: configserver
@@ -27,7 +27,7 @@ eureka:
       defaultZone: http://eureka-b:1002/eureka,http://eureka-a:1001/eureka
   instance:
     prefer-ip-address: true
-    hostname: 127.0.0.1
+    hostname: ${spring.cloud.client.ip-address}
 
 
 management:

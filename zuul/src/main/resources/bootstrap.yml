@@ -1,7 +1,7 @@
 #bootstrap 优先于application被加载
 spring:
   application:
-    name: provider
+    name: zuul
   cloud:
     config:
       label: master
