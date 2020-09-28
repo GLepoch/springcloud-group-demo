@@ -5,8 +5,8 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/GLepoch/learn_config.git
-          search-paths: provider
+          uri: https://github.com/GLepoch/cloud-config.git
+          search-paths: single-config/{application}
           username: GLepoch
           password: l537073101
   rabbitmq:
