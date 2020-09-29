@@ -51,7 +51,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             }
         })//配置动态权限认证自定义类
                 .and()
-                .formLogin()//开启表单登录
+                .formLogin()
+                .usernameParameter("username")
+                .passwordParameter("password")
+                .loginProcessingUrl("/login")
                 .permitAll();
     }
 }
