@@ -1,5 +1,7 @@
 #bootstrap 优先于application被加载
 spring:
+  mvc:
+    throw-exception-if-no-handler-found: true  # 出现错误时, 直接抛出异常(便于异常统一处理，否则捕获不到404)
   application:
     name: oauth
   cloud:

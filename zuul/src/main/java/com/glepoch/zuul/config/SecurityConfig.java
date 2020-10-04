@@ -29,6 +29,21 @@ import javax.sql.DataSource;
 @EnableOAuth2Sso
 @Order(0)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    AjaxAuthenticationEntryPoint authenticationEntryPoint;  //  未登陆时返回 JSON 格式的数据给前端（否则为 html）
+
+    @Autowired
+    AjaxAuthenticationSuccessHandler authenticationSuccessHandler;  // 登录成功返回的 JSON 格式数据给前端（否则为 html）
+
+    @Autowired
+    AjaxAuthenticationFailureHandler authenticationFailureHandler;  //  登录失败返回的 JSON 格式数据给前端（否则为 html）
+
+
+    @Autowired
+    AjaxAccessDeniedHandler accessDeniedHandler;    // 无权访问返回的 JSON 格式数据给前端（否则为 403 html 页面）
+
+
     @Autowired
     UserService userService;
     @Autowired
@@ -43,18 +58,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .disable()//关闭csrf访伪造访问
                 .authorizeRequests()
                 .withObjectPostProcessor(new ObjectPostProcessor<FilterSecurityInterceptor>() {
-            @Override
-            public <O extends FilterSecurityInterceptor> O postProcess(O o) {
-                o.setAccessDecisionManager(myAccessDecisionManager);
-                o.setSecurityMetadataSource(mySecurityMetadataSource);
-                return o;
-            }
-        })//配置动态权限认证自定义类
+                    @Override
+                    public <O extends FilterSecurityInterceptor> O postProcess(O o) {
+                        o.setAccessDecisionManager(myAccessDecisionManager);
+                        o.setSecurityMetadataSource(mySecurityMetadataSource);
+                        return o;
+                    }
+                })//配置动态权限认证自定义类
                 .and()
-                .formLogin()
-                .usernameParameter("username")
-                .passwordParameter("password")
-                .loginProcessingUrl("/login")
+                .formLogin()//.successHandler(authenticationSuccessHandler)
+                //.failureHandler(authenticationFailureHandler)
                 .permitAll();
     }
 }
